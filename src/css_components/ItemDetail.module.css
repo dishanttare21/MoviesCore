@@ -1,0 +1,121 @@
+:root{
+    --fs-xl: 7rem;
+    --fs-medium: 2.2rem;
+    --fs-600: 1.5rem;
+    --fs-400: 1rem;
+    --fs-200: 0.7rem
+}
+p{
+    font-size: var(--fs-200);
+}
+h1{
+    text-align: center;
+}
+h1{
+    font-size: var(--fs-600);
+}
+h4{
+    font-size: var(--fs-400);
+}
+h5{
+    font-size: var(--fs-200);
+}
+.container{
+    background: #fff;
+    width: 100%;
+    height: max-content;
+    /* border: 2px solid black; */
+    position: relative;
+    
+}
+.container img{
+    width: 100%;
+    max-width: 350px;
+    /* border: 2px solid black; */
+    margin: 0 auto;
+    display: block;
+}
+.imgDiv{
+    display: flex;
+    align-items: center;
+}
+.contentDiv,.imgDiv{
+    width: 95%;
+}
+
+.detailscard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    color: #000;
+    height: auto;
+    width: 80%;
+    max-width: 1200px;
+    margin: 6vh auto;
+    /* border: 2px solid black; */
+    z-index: 1;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.genres{
+    margin: 1em auto;
+}
+.genre{
+    background: black;
+    color: #fff;
+    margin: 1em 0.3em 0 0;
+    padding: 0.3em 0.8em;
+    border-radius: 40px;
+}
+.backdrop{
+    width: 100%;
+    height: 70vh;
+}
+.releaseyear{
+    font-size: 0.6em;
+    color: #444;
+}
+.otherdetails{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.otherdetails > div{
+    display: block;
+    width: 47%;
+    margin: 1em auto;
+}
+
+@media (min-width: 768px) {
+    h1{
+        text-align: left;
+    }
+    .detailscard{
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80%;
+    }
+    .contentDiv{
+        width: 68%;
+    }
+    .imgDiv{
+        width: 30%;
+    }
+} 
+
+@media (min-width: 1100px) {
+    p{
+        font-size: var(--fs-400);
+    }
+    h1{
+        font-size: var(--fs-medium);
+    }
+    h4{
+        font-size: var(--fs-400);
+    }
+    h5{
+        font-size: var(--fs-400);
+    }
+} 
+
+

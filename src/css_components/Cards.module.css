@@ -1,0 +1,28 @@
+.cards{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cards >*{
+    /* background-color: #888; */
+    transition: all 100ms ease;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.cards > *:hover, .cards > *:focus{
+    transform: translateY(-0.2em) scale(1.001);
+    filter: brightness(80%) ;
+}
+.cards a:hover{
+    text-decoration: underline;
+}
+
+@media (max-width: 675px) {
+    .cards >*{
+        width: 45%;
+    }
+}

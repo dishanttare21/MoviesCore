@@ -1,0 +1,32 @@
+.searchForm{
+    background-color: brown;
+    min-height: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('../images/image1.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60%;
+    margin: auto;
+}
+.searchBar{
+    width: 20%;
+    min-width: 250px;
+    height: 2.5em;
+    border: 2px solid black;
+}
+.searchBtn{
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 0.6em 1em;
+}
+
+@media (min-width: 675px) {
+    .searchForm{
+        flex-direction: row;
+    }
+}
