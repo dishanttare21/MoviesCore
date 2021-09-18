@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 const Item = ({ id, title, poster, rating, type }) => {
     const image = 'http://image.tmdb.org/t/p/w500/' + poster;
     if(type === "movie"){
-        var path1= `/moviedetail/${id}`
+        var path1= `/MoviesCore/moviedetail/${id}`
     }else{
-        var path1=`/seriesdetail/${id}`
+        var path1=`/MoviesCore/seriesdetail/${id}`
     }
     return (
         <div className={style.movie}>
