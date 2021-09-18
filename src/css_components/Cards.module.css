@@ -25,7 +25,7 @@
     text-decoration: underline;
 }
 .sectiontitle{
-    width: 80%;
+    width: 95%;
     margin: auto;
     border-bottom: 2px solid #bbb;
 }
@@ -35,5 +35,8 @@
     }
     .cards >*{
         width: 18%;
+    }
+    .sectiontitle{
+        width: 80%;
     }
 }
