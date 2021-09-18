@@ -6,18 +6,18 @@ const Header = () => {
     return (
         <header className={style.header}>
             <nav className={style.nav}>
-                <Link to="/">
+                <Link to="/MoviesCore">
                     <img className={style.logo} src="https://see.fontimg.com/api/renderfont4/WyonA/eyJyIjoiZnMiLCJoIjo3OCwidyI6MTI1MCwiZnMiOjYyLCJmZ2MiOiIjRkZGRkZGIiwiYmdjIjoiIzM1M0Q0QiIsInQiOjF9/TW92aWVzQ29yZQ/momcake-bold.png" alt="" />
                 </Link>
 
                 <ul className={style.links}>
-                    <Link to="/search">
+                    <Link to="/MoviesCore/search">
                         <li>Search</li>
                     </Link>
-                    <Link to="/movies">
+                    <Link to="/MoviesCore/movies">
                         <li>Movies</li>
                     </Link>
-                    <Link to="/series">
+                    <Link to="/MoviesCore/series">
                         <li>TV Shows</li>
                     </Link>
                 </ul>

@@ -17,12 +17,12 @@ function App() {
         <Header />
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/MoviesCore" component={Home} />
-          <Route path="/search" component={Search} />
-          <Route path="/movies" component={Movies} />
-          <Route path="/series" component={Series} />
-          <Route path="/moviedetail/:id" component={MoviesItem} />
-          <Route path="/seriesdetail/:id" component={SeriesItem} />
+          <Route path="/MoviesCore" exact component={Home} />
+          <Route path="/MoviesCore/search" component={Search} />
+          <Route path="/MoviesCore/movies" component={Movies} />
+          <Route path="/MoviesCore/series" component={Series} />
+          <Route path="/MoviesCore/moviedetail/:id" component={MoviesItem} />
+          <Route path="/MoviesCore/seriesdetail/:id" component={SeriesItem} />
         </Switch>
       </div>
     </Router>
