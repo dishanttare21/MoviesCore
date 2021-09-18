@@ -31,7 +31,6 @@ h5{
 .container img{
     width: 100%;
     max-width: 350px;
-    /* border: 2px solid black; */
     margin: 0 auto;
     display: block;
 }
@@ -84,6 +83,12 @@ h5{
     display: block;
     width: 47%;
     margin: 1em auto;
+}
+.network{
+    background-color: orange;
+    padding: 0.1em 0.5em; 
+    margin-right: 0.5em;
+    border-radius: 40px;
 }
 
 @media (min-width: 768px) {

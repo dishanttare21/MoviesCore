@@ -39,24 +39,25 @@ const MoviesItem = ({ match }) => {
                             <span className={style.genre} key={genre.id}>{genre.name} </span>
                         ))}
                     </div>
+                    
                     <h3>Plot:</h3>
                     <p>{item.overview}</p>
                     <div className={style.otherdetails}>
                         <div>
                             <h4>Rating</h4>
-                            <h5>{item.vote_average}/10</h5>
+                            <p>{item.vote_average}/10</p>
                         </div>
                         <div>
                             <h4>Budget</h4>
-                            <h5>${item.budget}</h5>
+                            <p>${item.budget}</p>
                         </div>
                         <div>
                             <h4>Revenue</h4>
-                            <h5>${item.revenue}</h5>
+                            <p>${item.revenue}</p>
                         </div>
                         <div>
                             <h4>Revenue</h4>
-                            <h5>{item.runtime} mins</h5>
+                            <p>{item.runtime} mins</p>
                         </div>
                     </div>
                 </div>
