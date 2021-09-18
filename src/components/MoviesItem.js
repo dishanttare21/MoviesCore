@@ -10,7 +10,7 @@ const MoviesItem = ({ match }) => {
         genres: [],
         releasedate : ''
     });
-    const [loading, setloading] = useState(false)
+
     useEffect(() => {
         fetchItems();
         console.log(match);
@@ -20,7 +20,6 @@ const MoviesItem = ({ match }) => {
         const response = await fetch(MOVIE_REQ_URL);
         const data = await response.json();
         setItem(data);
-        setloading(true);
         console.log(data);
     }
     const source = 'http://image.tmdb.org/t/p/w500/' + item.poster_path;
@@ -56,7 +55,7 @@ const MoviesItem = ({ match }) => {
                             <p>${item.revenue}</p>
                         </div>
                         <div>
-                            <h4>Revenue</h4>
+                            <h4>Runtime</h4>
                             <p>{item.runtime} mins</p>
                         </div>
                     </div>

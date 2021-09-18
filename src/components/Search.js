@@ -2,14 +2,15 @@ import React, { useState, useEffect } from 'react'
 import Item from './Item';
 import style from '../css_components/Cards.module.css'
 import style2 from '../css_components/Search.module.css'
+import Loading from './Loading';
 
 const Search = () => {
     const [movies, setMovies] = useState([]);
     const [search, setSearch] = useState('');
-    const [query, setQuery] = useState('afagsgsgsg')
+    const [query, setQuery] = useState('');
 
     const API_KEY = 'c468f1a4793dde84b380dc978e620225';
-    const SEARCH_URL = `https://api.themoviedb.org/3/search/multi?api_key=c468f1a4793dde84b380dc978e620225&language=en-US&query=${query}&page=1&include_adult=false`
+    const SEARCH_URL = `https://api.themoviedb.org/3/search/multi?api_key=${API_KEY}&language=en-US&query=${query}&page=1&include_adult=false`
 
     useEffect(() => {
         getMovies();
@@ -42,20 +43,24 @@ const Search = () => {
                     value={search}
                     onChange={updateSearch}
                     placeholder="Search for movies and tv shows" />
-                <button className={style2.searchBtn} type="submit">Search</button>
+                { search ? <button className={style2.searchBtn} type="submit" >Search</button> : <button className={style2.searchBtn} type="submit" disabled>Search</button>}
             </form>
-            <div className={style.cards}>
-                {movies.map(movie => (
-                    <Item
-                        key={movie.id}
-                        id={movie.id}
-                        title={movie.title || movie.name}
-                        poster={movie.poster_path || movie.profile_path}
-                        rating={movie.vote_average}
-                        type={movie.media_type}
-                    />
-                ))}
-            </div>
+            
+            { (query) ? <div>
+                <h3 className={style2.resultsHeader}>Results for {query}</h3>
+                <div className={style.cards}>
+                    {movies ? movies.map(movie => (
+                        <Item
+                            key={movie.id}
+                            id={movie.id}
+                            title={movie.title || movie.name}
+                            poster={movie.poster_path || movie.profile_path}
+                            rating={movie.vote_average}
+                            type={movie.media_type}
+                        />
+                    )) : (<p>No Results to show</p>)}
+                </div>
+            </div> : <p className={style2.resultsHeader}>No results to show</p>}
         </div>
     )
 }
