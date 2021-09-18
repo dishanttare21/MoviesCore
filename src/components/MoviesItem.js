@@ -34,9 +34,11 @@ const MoviesItem = ({ match }) => {
                     <h1>{item.title} <span className={style.releaseyear}>({item.release_date})</span></h1>
                     
                     <div className={style.genres}>
-                        {item.genres.map(genre => (
-                            <span className={style.genre} key={genre.id}>{genre.name} </span>
-                        ))}
+                        <ul class={style.genreList}>
+                            {item.genres.map(genre => (
+                                <li className={style.genre} key={genre.id}>{genre.name} </li>
+                            ))}
+                        </ul>
                     </div>
                     
                     <h3>Plot:</h3>

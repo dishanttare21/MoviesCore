@@ -36,13 +36,11 @@ const SeriesItem = ({ match }) => {
                     <h1>{item.name} <span className={style.releaseyear}>({item.first_air_date})</span></h1>
                     {/* <h3>Created by: </h3> */}
                     {/* <p>{item.created_by[0].name}</p> */}
-                    <div className={style.genres}>
-                        <p>
+                    <ul class={style.genreList}>
                             {item.genres.map(genre => (
-                                <span className={style.genre} key={genre.id}>{genre.name} </span>
+                                <li className={style.genre} key={genre.id}>{genre.name} </li>
                             ))}
-                        </p>
-                    </div>
+                        </ul>
                     <p><strong>Created by:</strong> {item.created_by.map(creator => (creator.name))}</p>
                     <h4>Plot:</h4>
                     <p>{item.overview}</p>

@@ -21,7 +21,7 @@ const TrendingSeries = ({start, stop}) => {
     }
     return (
         <section>
-                <h1 className="sectiontitle">Trending Series</h1>
+                <h1 className={style.sectiontitle}>Trending Series</h1>
                 <div className={style.cards}>
                     {trendingSeries.slice(start,stop).map((trending, index) => (
                         <Item

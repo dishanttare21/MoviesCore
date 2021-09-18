@@ -22,7 +22,7 @@ const PopularMovies = ({start, stop}) => {
     }
     return (
         <section>
-            <h1 className="sectiontitle">Popular Movies</h1>
+            <h2 className={style.sectiontitle}>Popular Movies</h2>
             <div className={style.cards}>
                 {popularMovies.slice(start, stop).map((popularMovie, index) => (
                     <Item

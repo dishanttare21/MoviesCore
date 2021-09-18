@@ -21,7 +21,7 @@ const TopRatedMovies = ({start, stop}) => {
     }
     return (
         <section>
-            <h1 className="sectiontitle">Top Rated Movies</h1>
+            <h2 className={style.sectiontitle}>Top Rated Movies</h2>
             <div className={style.cards}>
                 {top_ratedMovies.slice(start, stop).map((top_ratedMovie, index) => (
                     <Item

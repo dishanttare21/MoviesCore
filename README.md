@@ -1,9 +1,12 @@
 # Movie and TV Info App
 
-## libraries used\
+### Libraries/Packages used 
 react: npx create-react-app moviescore \
-react-router-dom: npm install react-router-dom \
+react-router-dom: npm install react-router-dom 
 
 
-# Powered By \
+### Powered By 
 themoviedb.org
+
+### Logo from
+https://www.fontspace.com/category/sans-serif
